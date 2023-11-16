@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> </head>
+	<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="module" src="module.js">
+		</script>
+    <script src="body.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+  <script type="module" src="module.js"></script>
+  <script type="module" src="mode.js"></script>
+<body>
+	<div id="navbar">
+		<div id="logo">
+			<img src="assets/logo.jpg" alt="">
+		</div>
+	</div>
+	<header>
+        <nav>
+			<ul>
+				<li><a href="index.html" data-title="Home page">Home</a></li>
+				<li><a href="about.html" data-title="Learn more About us">About</a></li>
+				<li><a href="reference.html" data-title="Browse our Reference materials">Reference</a></li>
+				<li><a href="#" data-title="3D Models">Models</a></li>
+				<li><a href="https://github.com/your-username" data-title="Visit our GitHub page">GitHub</a></li>
+			  </ul>
+        
+			GALLERY
+            <div class="gallery">
+                <div class="models">
+                  <img src="assets/spritee.jpg" alt="Coca-Cola" data-src="assets/sprite.glb">
+                  <img src="assets/mirinda.jpg" alt="Fanta" data-src="assets/tango.glb">
+                  <img src="assets/tango.jpg" alt="Sprite" data-src="assets/mirinda.glb">
+                  <img src="assets/sprun.png" alt="Dr Pepper" data-src="assets/7up.glb">
+                </div>
+                <div class="model-viewer-container">
+    <script>
+      function switchModel(modelSrc) {
+        const modelViewer = document.getElementById('model-viewer');
+        modelViewer.src = modelSrc;
+      }
+    </script>
+                <div id="conttainer">
+                  <model-viewer id="model-viewer" src="assets/cola.glb" alt="3D Object" camera-controls ar ios-src="assets/cola.usdz"></model-viewer>
+                  <div class="description">
+                    <p>This x3D model of the  has been created in 3ds max,and used transcoders to x3D for display online</p>
+                    <div id="modell-buttons">
+                      <h3>X3D Models</h3>
+                      <button onclick="switchModel('assets/cola.glb')">Cola</button>
+                      <button onclick="switchModel('assets/fanta.glb')">Fanta</button>
+                      <button onclick="switchModel('assets/dr.glb')">Dr Pepper</button>
+                      <div id="controlls">
+                        <h3>Controls</h3>
+                  <label for="render-mode">Render Mode:</label>
+                  <select id="render-mode" >
+                    <option value="mask">Mask</option>
+                    <option value="opaque">Opaque</option>
+                    <option value="blend">Blend</option>
+                  </select>
+          
+                  <label for="lighting">Lighting:</label>
+                  <select id="lighting" >
+                    <option value="auto">Auto</option>
+                    <option value="hdr">HDR</option>
+                    <option value="unlit">Unlit</option>
+                  </select>
+          
+                  <label for="camera-view">Camera View:</label>
+                  <select id="camera-view" >
+                    <option value="orbit">Orbit</option>
+                    <option value="back">Back</option>
+                    <option value="left">Left</option>
+                    <option value="right">Right</option>
+                    <option value="top">Top</option>
+                  </select>
+                </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+ 
+    <div id="footer">&copy; 2023 3D Apps | <div class="button-container"><button class="button" onclick="restyle()">Restyle</button> |
+      <button class="button" onclick="reset()">Reset</button>   All rights reserved.
+    </div></div>
+    </div>
+</body></html>
+
+
+
+              
